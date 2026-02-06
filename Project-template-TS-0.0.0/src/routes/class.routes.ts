@@ -19,11 +19,7 @@ classRouter.get("/",async (req,res)=>{
 
 classRouter.get("/:name", async (req,res)=>{
     const dado =  getRepository(Class); 
-   const response =await dado.find({
-        where:{
-            name: req.params.name 
-        }, 
-    }); 
+   const response =await dado.find(req.params)
     res.json(response)
 }); 
 export default classRouter 
