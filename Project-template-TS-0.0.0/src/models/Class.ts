@@ -14,9 +14,9 @@ export class Class{
    @Column()
     duration:number; 
 
-   @CreateDateColumn()
+   @CreateDateColumn({name:'created_At'})
     createdAt:Date; 
 
-    @UpdateDateColumn() 
+    @UpdateDateColumn({name:'updated_At'})  
     updateAt:Date; 
 }

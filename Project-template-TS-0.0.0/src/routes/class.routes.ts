@@ -13,5 +13,7 @@ classRouter.post("/", async (req,res)=>{
         res.status(404).json(error) 
     }
 })
-
+classRouter.get("/",async (req,res)=>{
+    res.json(await getRepository(Class).find());  
+})
 export default classRouter 
