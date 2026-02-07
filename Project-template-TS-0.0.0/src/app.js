@@ -4,10 +4,11 @@ faker.locale = "pt_BR";
 const clients = []; 
 
 for(let index = 0; index<10;index++){
-    const name = faker.name. findName();  
-    const email = faker.internet.email(name); 
-    const phoneNumber = faker.phone.phoneNumber(); 
-    const birth = faker.date.past(30,2000); 
+    const name = faker.person. firstName();  
+    const email = faker.internet.email(name);  
+    
+    const phoneNumber = faker.phone.number();  
+    const birth = faker.date.past({years:30,refDate:"2000-01-01"});  
 
    const client={
         name, 
